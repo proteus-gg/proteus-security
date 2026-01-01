@@ -12,9 +12,6 @@ This repository contains our cryptographic primitives, wallet integration patter
 |---------|-----------|----------------|
 | Are my keys encrypted properly? | `encryption.ts` | AES-256-GCM with random IV, auth tags |
 | Can you access my private keys? | `sessionSignerService.ts` | Keys derived deterministically, encrypted at rest |
-| How are API credentials stored? | `schema.ts` | Encrypted fields for secrets, never plaintext |
-| Do transactions require my approval? | `WalletContext.tsx` | Privy auth required, wallet signatures verified |
-| What data do you store about me? | `schema.ts` | Full schema visibility |
 
 ---
 
@@ -92,8 +89,6 @@ Manages Polymarket session signers for trading without per-transaction wallet co
 
 ## 3. Wallet Integration
 
-### `client/src/contexts/WalletContext.tsx`
-
 Centralized wallet state management using Privy authentication.
 
 **Authentication flow:**
@@ -126,8 +121,6 @@ const response = await fetch('/api/auth/register', {
 ---
 
 ## 4. Safe Wallet Management
-
-### `client/src/components/SafeWalletManager.tsx`
 
 Gnosis Safe (multi-sig) wallet deployment and management for trading.
 
@@ -171,8 +164,6 @@ REST API wrapper for Polymarket's Central Limit Order Book.
 ---
 
 ## 6. Data Schemas
-
-### `shared/schema.ts`
 
 Zod validation schemas defining what data we store and validate.
 
