@@ -209,13 +209,6 @@ export const insertSessionSignerSchema = z.object({
 | **Polymarket** | Trading execution | Orders, positions, API credentials |
 | **Polygon** | Blockchain | Transaction signatures |
 
----
-
-## 9. Security Contact
-
-Found a vulnerability? Please report responsibly:
-- Email: team@proteus.gg
-- Do not publicly disclose until patched
 
 ---
 
@@ -249,5 +242,13 @@ Clone this repo and audit the code. Key things to check:
 3. **No hardcoded secrets**: Are all sensitive values from env vars?
 4. **Auth validation**: Is Privy token checked on every protected route?
 5. **Encrypted storage**: Are sensitive fields marked as encrypted in schema?
+
+
+---
+
+## Contact
+
+Email: team@proteus.gg 
+X: @proteusgg
 
 
